@@ -1,2 +1,2 @@
-# virtualplaza.xyz
-http://virtualplaza.xyz
+# championmastery.xyz
+http://championmastery.xyz
