@@ -15,6 +15,7 @@ champApp.controller('MainController', function($scope, $http) {
     if (pair[0] === 'region')
       $scope.region = pair[1];
   }
+  $scope.searched = !!$scope.summoner || !!$scope.region;
   $scope.regions = ["NA", "BR", "EUNE", "EUW", "KR", "LAN", "LAS", "OCE", "TR", "RU"];
   
   $http.get(url).then(function(res) {

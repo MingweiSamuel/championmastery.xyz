@@ -36,7 +36,8 @@
       <input type="submit" value="go" />
     </form>
   </div>
-  <div ng-show="!data.data && (summoner || region)">Summoner not found</div>
+  <div ng-show="searched && !loaded">Loading...</div>
+  <div ng-show="!data.data && loaded && searched">Summoner not found</div>
   <div style="min-height: 300px;">
     <div ng-show="data.data" class="rank">
       <img ng-src="http://sk2.op.gg/images/medals/{{data.rankImage}}.png" />
