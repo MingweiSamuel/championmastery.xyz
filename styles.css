@@ -1,0 +1,50 @@
+body {
+  text-align:center;
+  font-family:Montserrat, Arial, sans-serif;
+}
+
+.masteries {
+  width:90%;
+  max-width:960px;
+  margin:0 auto;
+}
+
+.mastery {
+  display:inline-block;
+  position:relative;
+  width:78px;
+  margin-bottom:20px;
+  vertical-align:top;
+}
+
+.frame {
+  min-height:141px;
+  text-align:left;
+}
+
+.champion {
+  z-index:2;
+  width:70px;
+  height:70px;
+  position:relative;
+  top:11px;
+  left:4px;
+}
+
+.chest {
+  z-index:3;
+  position:absolute;
+  top:4px;
+  left:0;
+  margin-left:-3px;
+}
+
+.rank {
+  padding-bottom: 10px;
+}
+
+.rank > img {
+  width: 80px;
+  display: block;
+  margin: 0 auto;
+}
