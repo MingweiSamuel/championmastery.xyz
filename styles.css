@@ -3,6 +3,10 @@ body {
   font-family:Montserrat, Arial, sans-serif;
 }
 
+a, a:visited {
+  color: #111;
+}
+
 .masteries {
   width:90%;
   max-width:960px;
