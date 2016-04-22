@@ -10,12 +10,14 @@ champApp.controller('MainController', function($scope, $http) {
     var pair = params[i].split('=');
     if (pair.length < 2)
       continue;
+    var val = decodeURIComponent(pair[1]).replace(/\+/g, ' ');
     if (pair[0] === 'summoner')
-      $scope.summoner = pair[1];
+      $scope.summoner = val;
     if (pair[0] === 'region')
-      $scope.region = pair[1];
+      $scope.region = val;
   }
   $scope.searched = !!$scope.summoner || !!$scope.region;
+  $scope.region = $scope.region || 'NA';
   $scope.regions = ["NA", "BR", "EUNE", "EUW", "KR", "LAN", "LAS", "OCE", "TR", "RU"];
   
   $http.get(url).then(function(res) {
