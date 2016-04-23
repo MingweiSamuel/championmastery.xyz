@@ -40,7 +40,7 @@
   <div class="container" ng-show="!data.data && loaded && searched">Summoner not found</div>
   <div style="min-height: 300px;">
     <div class="container rank" ng-show="data.data">
-      <img ng-src="http://sk2.op.gg/images/medals/{{data.rankImage}}.png" />
+      <img ng-src="ranks/{{data.rankImage}}.png" />
       <span ng-bind="data.rankText"></span>
     </div>
     <div class="container">
