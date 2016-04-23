@@ -26,28 +26,29 @@
   <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 <body ng-controller="MainController">
-  <div>
+  <div class="container">
     <h1><a href="http://championmastery.xyz">championmastery.xyz</a> Lookup</h1>
   </div>
-  <div style="padding-bottom: 15px;">
+  <div class="container" style="padding-bottom: 15px;">
     <form action="{{window.location}}">
       <input type="text" name="summoner" ng-model="summoner" />
       <select name="region" ng-model="region" ng-options="option for option in regions track by option"></select>
       <input type="submit" value="go" />
     </form>
   </div>
-  <div ng-show="searched && !loaded">Loading...</div>
-  <div ng-show="!data.data && loaded && searched">Summoner not found</div>
+  <div class="container" ng-show="searched && !loaded">Loading...</div>
+  <div class="container" ng-show="error || data.error">An error occured. Please try again later.</div>
+  <div class="container" ng-show="!data.data && loaded && searched">Summoner not found</div>
   <div style="min-height: 300px;">
-    <div ng-show="data.data" class="rank">
+    <div class="container rank" ng-show="data.data">
       <img ng-src="http://sk2.op.gg/images/medals/{{data.rankImage}}.png" />
       <span ng-bind="data.rankText"></span>
     </div>
-    <div class="masteries">
+    <div class="container">
       <div ng-repeat="cm in data.data" class="mastery">
-        <div class="frame" style="background: url('{{data.frames[cm.championLevel2 - 1]}}') 0 0 no-repeat;">
+        <div class="frame" style="background: url('{{data.frames[cm.championLevel2 - 1]}}') center no-repeat;">
           <img class="champion" ng-src="{{data.champs[cm.championId].image}}" />
-          <img ng-show="cm.chestGranted" class="chest" src="https://i.imgur.com/kSRUKlb.png" alt="" />
+          <img class="chest" ng-show="cm.chestGranted" src="https://i.imgur.com/kSRUKlb.png" alt="" />
         </div>
         <div style="font-size: 0.6rem;">last played<br /><span ng-bind="cm.timeSince"></span> ago</div>
         <div ng-bind="cm.championPoints | number:0" /></div>
@@ -55,7 +56,7 @@
       </div>
     </div>
   </div>
-  <div class="footer">Made by <a href="reddit.com/u/LugnutsK">/u/LugnutsK</a></div>
+  <div class="footer">Made by <a href="http://reddit.com/u/LugnutsK">/u/LugnutsK</a></div>
   <div class="footer">
     This website is not endorsed by Riot Games and does not reflect the views or opinions of Riot Games or anyone officially involved in producing or managing League of Legends. Images are property of Riot Games, Inc.
     <!-- mingweisamuel.com -->

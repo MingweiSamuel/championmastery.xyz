@@ -4,10 +4,16 @@ body {
 }
 
 a, a:visited {
-  color: #111;
+  color:#111;
 }
 
-.masteries {
+input[type=text] {
+  width: 50%;
+  min-width: 100px;
+  max-width: 300px;
+}
+
+.container, .footer {
   width:90%;
   max-width:960px;
   margin:0 auto;
@@ -16,7 +22,7 @@ a, a:visited {
 .mastery {
   display:inline-block;
   position:relative;
-  width:78px;
+  width:80px;
   margin-bottom:20px;
   vertical-align:top;
 }
@@ -32,7 +38,7 @@ a, a:visited {
   height:70px;
   position:relative;
   top:11px;
-  left:4px;
+  left:5px;
 }
 
 .chest {
@@ -40,7 +46,7 @@ a, a:visited {
   position:absolute;
   top:4px;
   left:0;
-  margin-left:-3px;
+  margin-left:-2px;
 }
 
 .rank {

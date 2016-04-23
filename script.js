@@ -21,8 +21,11 @@ champApp.controller('MainController', function($scope, $http) {
   $scope.regions = ["NA", "BR", "EUNE", "EUW", "KR", "LAN", "LAS", "OCE", "TR", "RU"];
   
   $http.get(url).then(function(res) {
-    console.log('response', res);
+    //success
     $scope.loaded = true;
     $scope.data = res.data;
+  }, function(res) {
+    //error
+    $scope.error = true;
   });
 });
