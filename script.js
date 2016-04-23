@@ -24,6 +24,12 @@ champApp.controller('MainController', function($scope, $http) {
     //success
     $scope.loaded = true;
     $scope.data = res.data;
+    
+    var total = 0;
+    res.data.data.forEach(function(a) {
+      total += a.championPoints;
+    });
+    $scope.total = total;
   }, function(res) {
     //error
     $scope.error = true;
