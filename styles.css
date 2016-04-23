@@ -30,6 +30,8 @@ input[type=text] {
 .frame {
   min-height:141px;
   text-align:left;
+  background:url('mastery.png');
+  background-repeat:no-repeat;
 }
 
 .champion {

@@ -45,7 +45,7 @@
     </div>
     <div class="container">
       <div ng-repeat="cm in data.data" class="mastery">
-        <div class="frame" style="background: url('{{data.frames[cm.championLevel2 - 1]}}') center no-repeat;">
+        <div class="frame" style="background-position: -{{(cm.championLevel2 - 1) * 80}}px 0;">
           <img class="champion" ng-src="{{data.champs[cm.championId].image}}" />
           <img class="chest" ng-show="cm.chestGranted" src="https://i.imgur.com/kSRUKlb.png" alt="" />
         </div>
