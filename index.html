@@ -7,9 +7,9 @@
   <meta name="description" content="Champion Mastery Lookup | championmastery.xyz">
   <meta name="author" content="">
   
-  <meta property="og:site_name" content="championmastery.xyz"/>
-  <meta property="og:title" content="Champion Mastery Lookup"/>
-  <meta property="og:description" content="Champion mastery lookup for League of Legends"/>
+  <meta property="og:site_name" content="championmastery.xyz" />
+  <meta property="og:title" content="Champion Mastery Lookup" />
+  <meta property="og:description" content="Champion mastery lookup for League of Legends" />
   <meta property="og:image" content="favicon.png">
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -48,7 +48,7 @@
     </div>
     <div class="container">
       <div ng-repeat="cm in data.data" class="mastery">
-        <div class="frame" style="background-position: -{{(cm.championLevel2 - 1) * 80}}px 0;">
+        <div class="frame" style="background-position: -{{(cm.championLevel - 1) * 80}}px 0;">
           <img class="champion" ng-src="{{data.champs[cm.championId].image}}" />
           <img class="chest" ng-show="cm.chestGranted" src="chest.png" alt="" />
         </div>
